@@ -1,0 +1,63 @@
+
+-- Install Required Packages
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer --version 7.0.4
+dotnet add package Microsoft.EntityFrameworkCore --version 7.0.4
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 7.0.4
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 7.0.4
+
+
+-- DB Migration
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+-- using PMC
+PM> add-migration initcreate
+PM> 
+
+
+
+-- Publish App:
+dotnet publish -c Release -p:UseAppHost=false
+
+
+-- Kill Current Connection and Drop MSSQL DB: 
+USE [master]
+GO
+ALTER DATABASE [UserMSDev] SET  SINGLE_USER WITH ROLLBACK IMMEDIATE
+GO
+USE [master]
+GO
+DROP DATABASE [UserMSDev]
+GO
+
+
+
+-- Create local certificate:
+dotnet dev-certs https --clean
+dotnet dev-certs https -t
+
+
+
+-- Postman
+http://localhost:5000/api/authentication/registeration
+{
+    "username":"shahed",
+    "email":"shahed@gmail.com",
+    "password":"Shahed@123",
+    "firstname":"Shahed",
+    "lastname":"Dev"
+}
+
+
+http://localhost:5000/api/authentication/login
+{
+    "username":"shahed4",
+    "password":"Shahed@123"
+}
+
+http://localhost:5000/api/userlist
+
+
+
+
+
+
