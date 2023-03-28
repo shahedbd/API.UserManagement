@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "5d3854f3-4b03-4fba-b24d-5b814d52ba1c",
+		"name": "UserManagement.Api",
+		"description": "StartFragment\n\n## UserManagement.Api\n\nEndFragment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3324004"
+	},
+	"item": [
+		{
+			"name": "Userlist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InNoYWhlZDQiLCJqdGkiOiI5MTRiMGUyZi03YjM5LTQ0M2YtYjdmYy1hNmNkMjNlZWI4ZWQiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE2ODAwMjcwODMsImV4cCI6MTY4MDAzNzg4MywiaWF0IjoxNjgwMDI3MDgzLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAxIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMSJ9.VyLt_e0Z5xJHKISJ5V0rbNgdWj4jR_ZVWj43NlmRiFQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/userlist",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"userlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Userlist-IIS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InNoYWhlZDQiLCJqdGkiOiI5MTRiMGUyZi03YjM5LTQ0M2YtYjdmYy1hNmNkMjNlZWI4ZWQiLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE2ODAwMjcwODMsImV4cCI6MTY4MDAzNzg4MywiaWF0IjoxNjgwMDI3MDgzLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAxIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMSJ9.VyLt_e0Z5xJHKISJ5V0rbNgdWj4jR_ZVWj43NlmRiFQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:82/api/userlist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "82",
+					"path": [
+						"api",
+						"userlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"shahed4\",\r\n    \"password\":\"Shahed@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Authentication/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Authentication",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registeration",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"shahed8\",\r\n    \"email\":\"shahed8@gmail.com\",\r\n    \"password\":\"Shahed@123\",\r\n    \"firstname\":\"Shahed\",\r\n    \"lastname\":\"Dev\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/authentication/registeration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"authentication",
+						"registeration"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

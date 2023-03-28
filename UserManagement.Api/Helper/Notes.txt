@@ -11,7 +11,8 @@ dotnet ef migrations add InitialCreate
 dotnet ef database update
 -- using PMC
 PM> add-migration initcreate
-PM> 
+PM> update-database
+
 
 
 
